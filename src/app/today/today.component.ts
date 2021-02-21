@@ -40,10 +40,10 @@ remove(a:any){
   console.log(this.array)
 
 }
-move(a:any){
-
-  this.array2.push(a)
-  this.remove(a)
+move(b:any){
+   this.ind=this.array.indexOf(b)
+  this.array2.push(b)
+  
 
 
 
