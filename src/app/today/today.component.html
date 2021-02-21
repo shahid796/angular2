@@ -8,11 +8,29 @@
 </head>
 <body>
     <p>today works!</p>
-    <input type="text" value="{{value1}}" (input)="setnum($event)">
+    <div class="row">
+    <div class="col-sm-6">
+    <input type="text" value="{{value1}}" (input)="setnum($event)" >
     <button class="btn btn-primary" (click)="savearray()"> +</button>
+    <button class="btn btn-success" (click)="clear()">clear</button>
     <div>
-        {{data}}
+        <li *ngFor="let arr of array">
+            {{arr}}
+            <button (click)=remove(arr)>delete</button>
+            <button (click)=move(arr)>move</button>
+        </li>
     </div>
+</div>
+<div class="col-sm-6">
+    <p>tommarrow</p>
+    <div>
+        <li *ngFor="let i of array2">
+            {{i}}
+            <button (click)=remove2(i)>delete</button>
+        </li>
+    </div>
+</div>
+</div>
     
 </body>
 </html>

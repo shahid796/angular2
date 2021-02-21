@@ -9,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class TodayComponent implements OnInit {
   value1:string=""
   array:any[]=[]
-  data:any[]=[]
+  array2:any[]=[]
+  ind:any
+  ind2:any
+  
+
+  
+  
   
 
   constructor() { }
@@ -24,8 +30,32 @@ setnum(event:any){
 savearray(){
   
   this.array.push(this.value1)
+  
   console.log(this.array)
-  this.data=this.array
+  
 }
+remove(a:any){
+  this.ind=this.array.indexOf(a)
+  this.array.splice(this.ind,1)
+  console.log(this.array)
+
+}
+move(a:any){
+
+  this.array2.push(a)
+  this.remove(a)
+
+
+
+}
+remove2(n:any){
+  this.ind2=this.array2.indexOf(n)
+  this.array2.splice(this.ind2,1)
+  console.log(this.array2)
+}
+clear(){
+  this.value1=""
+}
+
 
 }
