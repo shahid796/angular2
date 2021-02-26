@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" (ngSubmit)="submit()" #myform="ngForm" class="form-inline my-2 my-lg-0">
+        <input type="text" class="form-control mr-sm-2" #productid="ngModel" placeholder="prd.id" minlength="2" required [(ngModel)]="model.productid" name="productid"><br>
+        <div *ngIf="productid.invalid && (productid.dirty || productid.touched)" class="alert alert-danger">
+
+            productid is invalid
+
+        </div>
+        <input type="text" class="form-control mr-sm-2" placeholder="prd.name" #productname="ngModel" minlength="3" required  [(ngModel)]="model.productname" name="productname"><br>
+        <div *ngIf="productname.invalid && (productname.dirty || productname.touched)" class="alert alert-danger">
+
+            username is invalid
+
+        </div>
+        <input type="text"  class="form-control mr-sm-2" placeholder="prd.price" #productprice="ngModel" minlength="2"required   [(ngModel)]="model.productprice" name="productprice"><br>
+        <div *ngIf="productprice.invalid && (productprice.dirty || productprice.touched)" class="alert alert-danger">
+
+            username is invalid
+
+        </div>
+        <input type="text" class="form-control mr-sm-2" placeholder="prd.des" minlength="4" required   [(ngModel)]="model.productdes" name="productdes"><br>
+<button [disabled]="!myform.form.valid">submit</button>
+    </form>
+</body>
+</html>

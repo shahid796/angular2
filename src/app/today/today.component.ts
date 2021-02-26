@@ -32,6 +32,7 @@ savearray(){
   this.array.push(this.value1)
   
   console.log(this.array)
+  this.clear()
   
 }
 remove(a:any){

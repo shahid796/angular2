@@ -6,10 +6,12 @@ left: 30%;right: 30%;height: 400px;">
     <label for="">value1</label>
 
 </div>
+
 <div *ngIf="operator==''">
     
     <input type="text" value="{{value1}}" (input)="setvalue1($event)">
 </div>
+
 <div>
     <label for="">value2</label>
 </div>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" (ngSubmit)="save()" #myform="ngForm" class="form-inline my-2 my-lg-0">
+        <div>
+            <label for="">username</label>
+            <input class="form-control mr-sm-2" type="text" [(ngModel)]="model.username" #username="ngModel"
+                placeholder="username" minlength="3" required name="username">
+            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+
+                username is invalid
+
+            </div>
+             <!-- <div *ngIf="username.errors.required">
+                 username is required
+            </div>  -->
+        </div>
+        <div>
+            <label for="">password</label>
+            <input class="form-control mr-sm-2" type="text" #password="ngModel" placeholder="password" required [(ngModel)]="model.password" name="password">
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+
+                password is invalid
+
+            </div>
+        </div>
+        <button [disabled]="!myform.form.valid">login</button>
+
+
+
+
+    </form>
+    {{myform.valid}}
+
+</body>
+
+</html>

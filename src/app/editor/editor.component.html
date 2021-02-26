@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body><p>sample works!</p>
-    {{data}}
-    <button type="button"  class="btn btn-danger">Primary</button>
-    <p [ngStyle]="{'color':'red'}">welcome</p>
+<body>
+    <input type="text" [formControl]="name" ><br>
     
+    <input type="text" [formControl]="email"><br>
+    <input type="text" [formControl]="password"><br>
+    <input type="text" [formControl]="mobile"><br>
+    <button (click)="save()">add</button>
     
 </body>
 </html>
-

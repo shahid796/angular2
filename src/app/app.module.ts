@@ -8,6 +8,13 @@ import { SampleComponent } from './sample/sample.component';
 import { CaluclatorComponent } from './caluclator/caluclator.component';
 import { DemoComponent } from './demo/demo.component';
 import { TodayComponent } from './today/today.component';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { ProductComponent } from './product/product.component';
+import { HomewrkComponent } from './homewrk/homewrk.component';
+import { EditorComponent } from './editor/editor.component';
+import { Calculator2Component } from './calculator2/calculator2.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +23,19 @@ import { TodayComponent } from './today/today.component';
     SampleComponent,
     CaluclatorComponent,
     DemoComponent,
-    TodayComponent
+    TodayComponent,
+    LoginComponent,
+    ProductComponent,
+    HomewrkComponent,
+    EditorComponent,
+    Calculator2Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
